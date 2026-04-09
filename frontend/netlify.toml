@@ -8,7 +8,7 @@
 # Proxy /api/* → Railway backend (updated after Railway deploy)
 [[redirects]]
   from = "/api/*"
-  to = "RAILWAY_URL_PLACEHOLDER/api/:splat"
+  to = "https://studiochupanh-production.up.railway.app/api/:splat"
   status = 200
   force = true
 
