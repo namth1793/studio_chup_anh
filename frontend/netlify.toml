@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Proxy /api/* → Railway backend (updated after Railway deploy)
+[[redirects]]
+  from = "/api/*"
+  to = "RAILWAY_URL_PLACEHOLDER/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback — all routes → index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
