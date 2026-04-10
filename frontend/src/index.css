@@ -9,9 +9,13 @@
 
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #FAF8F5;
-    color: #0A0A0A;
+    background-color: #FFFFFF;
+    color: #111111;
     -webkit-font-smoothing: antialiased;
+  }
+
+  img {
+    filter: brightness(1.06) saturate(1.12);
   }
 
   h1, h2, h3, h4 {
@@ -65,7 +69,7 @@
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-track { background: #FFFFFF; }
 ::-webkit-scrollbar-thumb { background: #B8935A; border-radius: 2px; }
 
 /* Page transitions */
@@ -92,7 +96,7 @@
 
 /* Hero overlay text */
 .hero-overlay {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.38) 100%);
 }
 
 /* Masonry grid */

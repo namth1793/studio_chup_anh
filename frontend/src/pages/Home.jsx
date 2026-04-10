@@ -279,7 +279,7 @@ function TestimonialsCarousel({ items, tr }) {
                 width: i === current ? '28px' : '6px',
                 height: '6px',
                 borderRadius: i === current ? '3px' : '50%',
-                background: i === current ? 'rgba(184,147,90,0.9)' : 'rgba(250,248,245,0.25)',
+                background: i === current ? 'rgba(201,169,110,0.95)' : 'rgba(255,255,255,0.25)',
               }}
               aria-label={`Testimonial ${i + 1}`}
             />
@@ -390,7 +390,7 @@ export default function Home() {
                     alt={svc.key}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-ink/40 group-hover:bg-ink/60 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-ink/25 group-hover:bg-ink/45 transition-colors duration-500" />
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <h3 className="font-display font-light text-2xl text-cream mb-2">
                       {tr(`services.${svc.key}.title`)}
@@ -419,7 +419,7 @@ export default function Home() {
           alt="CTA"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-ink/70" />
+        <div className="absolute inset-0 bg-ink/55" />
         <AosDiv className="relative z-10 text-center px-6">
           <h2 className="section-title-light mb-6 whitespace-pre-line">{tr('ctaSection.title')}</h2>
           <p className="font-body font-light text-sm text-cream/70 mb-10 max-w-md mx-auto">

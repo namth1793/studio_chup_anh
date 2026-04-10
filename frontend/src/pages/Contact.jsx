@@ -59,7 +59,7 @@ export default function Contact() {
           alt="Contact hero"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-ink/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
         <AosDiv className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <p className="section-label text-cream/60 mb-2">{tr('hero.label')}</p>
           <h1 className="section-title-light whitespace-pre-line mb-4">{tr('hero.title')}</h1>
