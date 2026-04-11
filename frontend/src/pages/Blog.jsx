@@ -59,7 +59,7 @@ export default function Blog() {
           alt="Blog"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
         <AosDiv className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <p className="section-label text-cream/60 mb-2">{tr('hero.label')}</p>
           <h1 className="section-title-light whitespace-pre-line mb-4">{tr('hero.title')}</h1>
@@ -76,7 +76,7 @@ export default function Blog() {
                 key={key}
                 onClick={() => setActiveCategory(key)}
                 className={`font-body font-medium text-xs tracking-widest uppercase whitespace-nowrap transition-all duration-300 pb-1 border-b-2
-                  ${activeCategory === key ? 'border-ink text-ink' : 'border-transparent text-mist hover:text-stone'}`}
+                  ${activeCategory === key ? 'border-gold text-gold' : 'border-transparent text-mist hover:text-stone'}`}
               >
                 {label}
               </button>
@@ -116,7 +116,7 @@ export default function Blog() {
                     </h2>
                     <p className="font-body font-light text-sm text-stone leading-relaxed mb-8">{featured.excerpt}</p>
                     <div className="flex items-center justify-between">
-                      <span className="font-body font-medium text-xs tracking-widest uppercase text-ink border-b border-ink pb-px">
+                      <span className="font-body font-medium text-xs tracking-widest uppercase text-gold border-b border-gold pb-px">
                         {tr('readMore')} →
                       </span>
                       <span className="font-body font-light text-xs text-mist">{formatDate(featured.published_at)}</span>
@@ -146,7 +146,7 @@ export default function Blog() {
                         <h3 className="font-display font-light text-xl text-ink mb-3 leading-snug">{post.title}</h3>
                         <p className="font-body font-light text-xs text-stone leading-relaxed mb-5 line-clamp-3">{post.excerpt}</p>
                         <div className="flex items-center justify-between">
-                          <span className="font-body font-medium text-xs tracking-widest uppercase text-ink border-b border-ink pb-px">
+                          <span className="font-body font-medium text-xs tracking-widest uppercase text-gold border-b border-gold pb-px">
                             {tr('readMore')} →
                           </span>
                           <span className="font-body font-light text-xs text-mist">{formatDate(post.published_at)}</span>

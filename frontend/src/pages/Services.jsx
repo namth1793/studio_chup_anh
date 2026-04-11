@@ -58,7 +58,7 @@ export default function Services() {
           alt="Services"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
         <AosDiv className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <p className="section-label text-cream/60 mb-2">{tr('hero.label')}</p>
           <h1 className="section-title-light whitespace-pre-line mb-4">{tr('hero.title')}</h1>
@@ -76,17 +76,17 @@ export default function Services() {
             {packages.map(({ key, featured }, i) => {
               const pkg = tr(`packages.${key}`)
               return (
-                <AosDiv key={key} delay={i * 120} className={`relative p-10 flex flex-col ${featured ? 'bg-ink text-cream' : 'bg-cream text-ink'}`}>
+                <AosDiv key={key} delay={i * 120} className={`relative p-10 flex flex-col ${featured ? 'bg-gold text-white' : 'bg-cream text-ink'}`}>
                   {featured && (
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gold" />
                   )}
                   <div className="mb-8">
                     <div className="flex items-start justify-between mb-2">
-                      <p className={`font-body font-medium text-xs tracking-ultra uppercase ${featured ? 'text-cream/50' : 'text-mist'}`}>
+                      <p className={`font-body font-medium text-xs tracking-ultra uppercase ${featured ? 'text-white/70' : 'text-mist'}`}>
                         {pkg.tag}
                       </p>
                     </div>
-                    <h3 className={`font-display font-light text-3xl mb-4 ${featured ? 'text-cream' : 'text-ink'}`}>
+                    <h3 className={`font-display font-light text-3xl mb-4 ${featured ? 'text-white' : 'text-ink'}`}>
                       {pkg.name}
                     </h3>
                     <p className={`font-display text-2xl ${featured ? 'text-gold' : 'text-gold'}`}>
@@ -95,7 +95,7 @@ export default function Services() {
                   </div>
                   <ul className="flex-1 space-y-3 mb-10">
                     {(pkg.items || []).map((item) => (
-                      <li key={item} className={`font-body font-light text-sm flex items-start gap-3 ${featured ? 'text-cream/80' : 'text-stone'}`}>
+                      <li key={item} className={`font-body font-light text-sm flex items-start gap-3 ${featured ? 'text-white/90' : 'text-stone'}`}>
                         <span className={`mt-0.5 flex-shrink-0 w-1 h-1 rounded-full ${featured ? 'bg-gold' : 'bg-gold'}`} style={{ marginTop: '0.45rem' }} />
                         {item}
                       </li>
@@ -105,7 +105,7 @@ export default function Services() {
                     to="/booking"
                     className={`font-body font-medium text-xs tracking-widest uppercase border px-6 py-3.5 text-center transition-all duration-300
                       ${featured
-                        ? 'border-cream text-cream hover:bg-cream hover:text-ink'
+                        ? 'border-white text-white hover:bg-white hover:text-gold'
                         : 'border-ink text-ink hover:bg-ink hover:text-cream'
                       }`}
                   >

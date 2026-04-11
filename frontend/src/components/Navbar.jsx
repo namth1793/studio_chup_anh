@@ -86,7 +86,7 @@ export default function Navbar() {
               to="/booking"
               className={`font-body font-medium text-xs tracking-widest uppercase border px-5 py-2.5 transition-all duration-300
                 ${scrolled || !isHome
-                  ? 'border-ink text-ink hover:bg-ink hover:text-cream'
+                  ? 'border-gold text-gold hover:bg-gold hover:text-white'
                   : 'border-cream text-cream hover:bg-cream hover:text-ink'
                 }`}
             >

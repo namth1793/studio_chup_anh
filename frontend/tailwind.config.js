@@ -4,14 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#111111',
-        stone: '#4A4A4A',
-        mist: '#999999',
+        ink: '#3A3A3A',
+        stone: '#6B6561',
+        mist: '#9E9898',
         cream: '#FFFFFF',
-        sand: '#F8F4EE',
-        bone: '#EDE8DF',
-        gold: '#C9A96E',
-        'gold-light': '#E0C285',
+        sand: '#EAE7E1',
+        bone: '#D4D0CA',
+        gold: '#D8A7B1',
+        'gold-light': '#E8C4CB',
+        blush: '#F7F1F3',
+        olive: '#A3B18A',
+        'olive-light': '#C8D5B9',
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'Georgia', 'serif'],

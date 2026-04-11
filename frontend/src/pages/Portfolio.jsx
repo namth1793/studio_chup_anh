@@ -73,7 +73,7 @@ export default function Portfolio() {
           alt="Portfolio hero"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full aos-hidden">
           <p className="section-label text-cream/60 mb-2">{t('portfolio.hero.label')}</p>
           <h1 className="section-title-light whitespace-pre-line mb-4">{t('portfolio.hero.title')}</h1>
@@ -90,7 +90,7 @@ export default function Portfolio() {
                 key={c.key}
                 onClick={() => setActive(c.key)}
                 className={`font-body font-medium text-xs tracking-widest uppercase whitespace-nowrap transition-all duration-300 pb-1 border-b-2
-                  ${active === c.key ? 'border-ink text-ink' : 'border-transparent text-mist hover:text-stone'}`}
+                  ${active === c.key ? 'border-gold text-gold' : 'border-transparent text-mist hover:text-stone'}`}
               >
                 {c.label}
               </button>
@@ -115,7 +115,7 @@ export default function Portfolio() {
                   className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500" />
               </div>
             </div>
           ))}

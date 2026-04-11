@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import FloatingContact from './components/FloatingContact'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import Services from './pages/Services'
@@ -37,6 +38,7 @@ function AppInner() {
         </Routes>
       </main>
       <Footer />
+      <FloatingContact />
     </div>
   )
 }

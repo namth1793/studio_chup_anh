@@ -47,7 +47,7 @@ export default function About() {
           alt="About hero"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
         <AosDiv className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <p className="section-label text-cream/60 mb-2">{tr('hero.label')}</p>
           <h1 className="section-title-light whitespace-pre-line mb-4">{tr('hero.title')}</h1>
@@ -137,7 +137,7 @@ export default function About() {
           alt="CTA"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-ink/55" />
+        <div className="absolute inset-0 bg-black/45" />
         <AosDiv className="relative z-10 text-center px-6">
           <h2 className="section-title-light mb-6">{t('home.ctaSection.title').replace('\n', ' ')}</h2>
           <p className="font-body font-light text-sm text-cream/70 mb-10 max-w-md mx-auto">

@@ -212,14 +212,14 @@ function TestimonialsCarousel({ items, tr }) {
   const item = items[current]
 
   return (
-    <section className="py-28 bg-ink overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <AosDiv className="text-center mb-16">
-          <p className="section-label text-cream/40">{tr('testimonials.label')}</p>
-          <h2 className="section-title-light whitespace-pre-line">{tr('testimonials.title')}</h2>
+    <section className="py-20 bg-sand overflow-hidden">
+      <div className="max-w-2xl mx-auto px-6">
+        <AosDiv className="text-center mb-12">
+          <p className="section-label">{tr('testimonials.label')}</p>
+          <h2 className="section-title whitespace-pre-line">{tr('testimonials.title')}</h2>
         </AosDiv>
 
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-xl mx-auto">
           {/* Card */}
           <div
             className="transition-all duration-350 ease-in-out"
@@ -233,36 +233,36 @@ function TestimonialsCarousel({ items, tr }) {
             }}
           >
             {/* Quote mark */}
-            <div className="text-center mb-8">
-              <span className="font-display text-8xl text-gold/30 leading-none select-none">"</span>
+            <div className="text-center mb-4">
+              <span className="font-display text-6xl text-gold/40 leading-none select-none">"</span>
             </div>
 
-            <p className="font-display italic text-xl md:text-2xl text-cream/85 leading-relaxed text-center mb-10 px-4">
+            <p className="font-display italic text-lg md:text-xl text-stone leading-relaxed text-center mb-8 px-2">
               {item.text}
             </p>
 
-            <div className="flex flex-col items-center gap-2 pt-8 border-t border-cream/10">
+            <div className="flex flex-col items-center gap-2 pt-6 border-t border-bone">
               {/* Avatar initials */}
-              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-2">
+              <div className="w-12 h-12 rounded-full border border-gold/50 bg-blush flex items-center justify-center mb-2">
                 <span className="font-display text-lg text-gold">
                   {item.name?.[0] || 'K'}
                 </span>
               </div>
-              <p className="font-body font-medium text-sm text-cream">{item.name}</p>
-              <p className="font-body font-light text-xs text-cream/50 tracking-wide">{item.role}</p>
+              <p className="font-body font-medium text-sm text-ink">{item.name}</p>
+              <p className="font-body font-light text-xs text-mist tracking-wide">{item.role}</p>
             </div>
           </div>
 
           {/* Arrows */}
           <button
             onClick={handlePrev}
-            className="absolute -left-4 md:-left-16 top-1/2 -translate-y-1/2 text-cream/30 hover:text-cream transition-colors duration-300 text-2xl font-light w-12 h-12 flex items-center justify-center"
+            className="absolute -left-4 md:-left-16 top-1/2 -translate-y-1/2 text-mist hover:text-gold transition-colors duration-300 text-2xl font-light w-12 h-12 flex items-center justify-center"
           >
             ←
           </button>
           <button
             onClick={handleNext}
-            className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 text-cream/30 hover:text-cream transition-colors duration-300 text-2xl font-light w-12 h-12 flex items-center justify-center"
+            className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 text-mist hover:text-gold transition-colors duration-300 text-2xl font-light w-12 h-12 flex items-center justify-center"
           >
             →
           </button>
@@ -279,7 +279,7 @@ function TestimonialsCarousel({ items, tr }) {
                 width: i === current ? '28px' : '6px',
                 height: '6px',
                 borderRadius: i === current ? '3px' : '50%',
-                background: i === current ? 'rgba(201,169,110,0.95)' : 'rgba(255,255,255,0.25)',
+                background: i === current ? '#D8A7B1' : '#D4D0CA',
               }}
               aria-label={`Testimonial ${i + 1}`}
             />
@@ -390,7 +390,7 @@ export default function Home() {
                     alt={svc.key}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-ink/25 group-hover:bg-ink/45 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <h3 className="font-display font-light text-2xl text-cream mb-2">
                       {tr(`services.${svc.key}.title`)}
@@ -419,7 +419,7 @@ export default function Home() {
           alt="CTA"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-ink/55" />
+        <div className="absolute inset-0 bg-black/45" />
         <AosDiv className="relative z-10 text-center px-6">
           <h2 className="section-title-light mb-6 whitespace-pre-line">{tr('ctaSection.title')}</h2>
           <p className="font-body font-light text-sm text-cream/70 mb-10 max-w-md mx-auto">

@@ -51,7 +51,7 @@ export default function BlogDetail() {
           alt={post.title}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 max-w-4xl">
           <p className="font-body font-medium text-xs tracking-ultra uppercase text-gold mb-4">
             {(t('blog.categories') || {})[post.category] || post.category}
