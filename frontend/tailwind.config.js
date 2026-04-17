@@ -15,6 +15,8 @@ export default {
         blush: '#F7F1F3',
         olive: '#A3B18A',
         'olive-light': '#C8D5B9',
+        brand: '#BBA18E',
+        'brand-light': '#D4BFB0',
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'Georgia', 'serif'],

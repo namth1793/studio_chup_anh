@@ -96,7 +96,7 @@ export default function BlogDetail() {
             </div>
             <div>
               <p className="font-body font-medium text-sm text-ink">{post.author}</p>
-              <p className="font-body font-light text-xs text-mist">Lumière Studio</p>
+              <p className="font-body font-light text-xs text-mist">MOMIJI STUDIO</p>
             </div>
           </div>
         </div>

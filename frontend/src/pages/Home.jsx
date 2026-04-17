@@ -3,37 +3,22 @@ import { Link } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 
 const HERO_SLIDES = [
-  {
-    src: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920&q=85',
-    label: 'Ảnh Cưới',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=85',
-    label: 'Wedding',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1920&q=85',
-    label: 'Portrait',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=85',
-    label: 'Ảnh Cưới',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=85',
-    label: 'Wedding',
-  },
+  { src: '/anh_cuoi/DSC05002.JPG', label: 'Ảnh Cưới' },
+  { src: '/anh_kimono/DSC02969.jpg', label: 'Kimono' },
+  { src: '/anh_bau/2I4A1308.jpg', label: 'Mẹ Bầu' },
+  { src: '/anh_cuoi/DSC04680.JPG', label: 'Ảnh Cưới' },
+  { src: '/anh_be/DSC05028.jpg', label: 'Em Bé' },
 ]
 
-const INTRO_IMG = 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=900&q=80'
+const INTRO_IMG = '/anh_bau/2I4A1297.jpg'
 
 const featuredPhotos = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80', category: 'wedding', tall: true },
-  { id: 2, src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80', category: 'portrait', tall: false },
-  { id: 3, src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80', category: 'graduation', tall: false },
-  { id: 4, src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80', category: 'wedding', tall: true },
-  { id: 5, src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80', category: 'portrait', tall: false },
-  { id: 6, src: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=600&q=80', category: 'family', tall: false },
+  { id: 1, src: '/anh_cuoi/DSC04991.JPG', category: 'wedding', tall: true },
+  { id: 2, src: '/anh_bau/2I4A1716.jpg', category: 'bau', tall: false },
+  { id: 3, src: '/anh_bau/2I4A1308.jpg', category: 'bau', tall: false },
+  { id: 4, src: '/anh_cuoi/DSC05940.jpg', category: 'wedding', tall: true },
+  { id: 5, src: '/anh_be/IMG_3690.JPG', category: 'be', tall: false },
+  { id: 6, src: '/anh_bau/2I4A5985.jpg', category: 'bau', tall: false },
 ]
 
 function useAos() {
@@ -378,13 +363,13 @@ export default function Home() {
           </AosDiv>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-bone">
             {[
-              { key: 'wedding', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80' },
-              { key: 'graduation', img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80' },
-              { key: 'portrait', img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80' },
-              { key: 'family', img: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=600&q=80' },
+              { key: 'wedding', img: '/anh_cuoi/20x30%20in%20tguong.JPG' },
+              { key: 'kimono', img: '/anh_kimono/DSC02618.JPG' },
+              { key: 'bau', img: '/anh_bau/2I4A1234.jpg' },
+              { key: 'be', img: '/anh_be/DSC05028.jpg' },
             ].map((svc, i) => (
               <AosDiv key={svc.key} delay={i * 100} className="bg-cream">
-                <div className="relative overflow-hidden group h-64">
+                <Link to={`/services?tab=${svc.key}`} className="block relative overflow-hidden group aspect-square cursor-pointer">
                   <img
                     src={svc.img}
                     alt={svc.key}
@@ -399,7 +384,7 @@ export default function Home() {
                       {tr(`services.${svc.key}.desc`)}
                     </p>
                   </div>
-                </div>
+                </Link>
               </AosDiv>
             ))}
           </div>

@@ -14,9 +14,9 @@ export default function Footer() {
 
   const services = [
     t('home.services.wedding.title'),
-    t('home.services.graduation.title'),
-    t('home.services.portrait.title'),
-    t('home.services.family.title'),
+    t('home.services.kimono.title'),
+    t('home.services.bau.title'),
+    t('home.services.be.title'),
   ]
 
   const socials = ['Facebook', 'Instagram', 'YouTube', 'TikTok']
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h2 className="font-display font-light text-3xl tracking-wider mb-4">Lumière</h2>
+            <h2 className="font-display font-light text-3xl tracking-wider mb-4" style={{ color: '#BBA18E' }}>MOMIJI STUDIO</h2>
             <p className="font-body font-light text-sm text-cream/60 leading-relaxed mb-6">
               {t('footer.tagline')}
             </p>
@@ -86,8 +86,8 @@ export default function Footer() {
           <p className="font-body font-light text-xs text-cream/40 tracking-wide">
             {t('footer.copyright')}
           </p>
-          <p className="font-body font-light text-xs text-cream/30 tracking-widest uppercase">
-            Lumière Studio
+          <p className="font-body font-light text-xs tracking-widest uppercase" style={{ color: '#BBA18E99' }}>
+            MOMIJI STUDIO
           </p>
         </div>
       </div>

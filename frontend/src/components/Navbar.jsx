@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 
@@ -36,15 +36,14 @@ export default function Navbar() {
     : 'bg-transparent'
 
   const textColor = scrolled || !isHome || menuOpen ? 'text-ink' : 'text-cream'
-  const logoColor = scrolled || !isHome || menuOpen ? 'text-ink' : 'text-cream'
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-1 lg:px-1">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className={`font-display font-light text-2xl tracking-wider transition-colors duration-500 ${logoColor}`}>
-            Lumière
+          <Link to="/" className="font-display font-bold text-2xl tracking-wider transition-colors duration-500" style={{ color: '#BBA18E' }}>
+            MOMIJI STUDIO
           </Link>
 
           {/* Desktop Nav */}
