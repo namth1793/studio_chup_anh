@@ -8,8 +8,6 @@ import Services from './pages/Services'
 import Booking from './pages/Booking'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import BlogDetail from './pages/BlogDetail'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
@@ -31,8 +29,6 @@ function AppInner() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogDetail />} />
         </Routes>
       </main>
       <Footer />

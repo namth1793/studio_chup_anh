@@ -21,7 +21,7 @@ const translations = {
       intro: {
         label: 'Về MOMIJI STUDIO',
         title: 'Nghệ Thuật Được\nTạo Ra Từ Cảm Xúc',
-        text: 'MOMIJI STUDIO là nơi mỗi bức ảnh là một tác phẩm nghệ thuật được chắt lọc từ cảm xúc chân thực nhất. Với hơn 10 năm kinh nghiệm, chúng tôi đã ghi lại hàng nghìn khoảnh khắc đáng nhớ cho các cặp đôi, gia đình và cá nhân trên khắp Việt Nam.',
+        text: 'MOMIJI STUDIO là nơi mỗi bức ảnh là một tác phẩm nghệ thuật được chắt lọc từ cảm xúc chân thực nhất.',
         stat1: { number: '2.500+', label: 'Bộ Ảnh Hoàn Thành' },
         stat2: { number: '10+', label: 'Năm Kinh Nghiệm' },
         stat3: { number: '98%', label: 'Khách Hàng Hài Lòng' },
@@ -79,7 +79,7 @@ const translations = {
         title: 'Sẵn Sàng Ghi Lại\nKỷ Niệm Của Bạn?',
         text: 'Liên hệ với chúng tôi ngay hôm nay để được tư vấn miễn phí và đặt lịch chụp ảnh.',
         button: 'Đặt Lịch Ngay',
-        phone: 'Hoặc gọi: 0901 234 567',
+        phone: 'Hoặc gọi: 080-6672-1993',
       },
     },
     portfolio: {
@@ -174,9 +174,9 @@ const translations = {
       info: {
         title: 'Thông Tin Liên Hệ',
         address: 'Tòa Nhà Oji OJ, 1-21-2 Oji\nQuận Kita, Tokyo 114-0002, Nhật Bản',
-        phone: '0901 234 567',
+        phone: '080-6672-1993',
         email: 'hello@momijistudio.vn',
-        hours: 'Thứ 2 — Thứ 7: 9:00 – 19:00',
+        hours: 'Thứ 2 — Thứ 7: 9:00 – 18:00',
       },
     },
     about: {
@@ -253,9 +253,9 @@ const translations = {
       info: {
         title: 'Thông Tin Liên Hệ',
         address: { label: 'Địa Chỉ', value: 'Tòa Nhà Oji OJ, 1-21-2 Oji, Quận Kita, Tokyo 114-0002, Nhật Bản' },
-        phone: { label: 'Điện Thoại', value: '0901 234 567' },
+        phone: { label: 'Điện Thoại', value: '080-6672-1993' },
         email: { label: 'Email', value: 'hello@momijistudio.vn' },
-        hours: { label: 'Giờ Làm Việc', value: 'Thứ 2 — Thứ 7: 9:00 – 19:00' },
+        hours: { label: 'Giờ Làm Việc', value: 'Thứ 2 — Thứ 7: 9:00 – 18:00' },
         social: { title: 'Theo Dõi Chúng Tôi', items: ['Facebook', 'Instagram', 'YouTube', 'TikTok'] },
       },
     },
@@ -273,7 +273,7 @@ const translations = {
       categories: { all: 'Tất Cả', tips: 'Kinh Nghiệm', behind: 'Hậu Trường', inspiration: 'Cảm Hứng' },
     },
     floatingContact: {
-      callTooltip: '0901 234 567',
+      callTooltip: '080-6672-1993',
       callLabel: 'Gọi điện',
       zaloTooltip: 'Nhắn Zalo',
       zaloLabel: 'Chat Zalo',
@@ -281,7 +281,7 @@ const translations = {
     footer: {
       tagline: 'Lưu giữ những khoảnh khắc vĩnh cửu.',
       address: 'Tòa Nhà Oji OJ, 1-21-2 Oji, Quận Kita, Tokyo 114-0002, Nhật Bản',
-      phone: '0901 234 567',
+      phone: '080-6672-1993',
       email: 'hello@momijistudio.vn',
       pagesTitle: 'Trang',
       servicesTitle: 'Dịch Vụ',
@@ -312,7 +312,7 @@ const translations = {
       intro: {
         label: 'About MOMIJI STUDIO',
         title: 'Art Born From\nAuthentic Emotion',
-        text: 'MOMIJI STUDIO is where every photograph is a work of art distilled from the most genuine emotions. With over 10 years of experience, we have captured thousands of unforgettable moments for couples, families, and individuals across Vietnam.',
+        text: 'MOMIJI STUDIO is where every photograph is a work of art distilled from the most genuine emotions.',
         stat1: { number: '2,500+', label: 'Sessions Completed' },
         stat2: { number: '10+', label: 'Years Experience' },
         stat3: { number: '98%', label: 'Client Satisfaction' },
@@ -370,7 +370,7 @@ const translations = {
         title: 'Ready to Capture\nYour Memories?',
         text: 'Contact us today for a free consultation and to schedule your photography session.',
         button: 'Book a Session',
-        phone: 'Or call: 0901 234 567',
+        phone: 'Or call: 080-6672-1993',
       },
     },
     portfolio: {
@@ -457,9 +457,9 @@ const translations = {
       info: {
         title: 'Contact Information',
         address: 'Oji OJ Building, 1-21-2 Oji\nKita Ward, Tokyo 114-0002, Japan',
-        phone: '0901 234 567',
+        phone: '080-6672-1993',
         email: 'hello@momijistudio.vn',
-        hours: 'Mon — Sat: 9:00 AM – 7:00 PM',
+        hours: 'Mon — Sat: 9:00 AM – 6:00 PM',
       },
     },
     about: {
@@ -536,9 +536,9 @@ const translations = {
       info: {
         title: 'Contact Information',
         address: { label: 'Address', value: 'Oji OJ Building, 1-21-2 Oji, Kita Ward, Tokyo 114-0002, Japan' },
-        phone: { label: 'Phone', value: '0901 234 567' },
+        phone: { label: 'Phone', value: '080-6672-1993' },
         email: { label: 'Email', value: 'hello@momijistudio.vn' },
-        hours: { label: 'Working Hours', value: 'Monday — Saturday: 9:00 AM – 7:00 PM' },
+        hours: { label: 'Working Hours', value: 'Monday — Saturday: 9:00 AM – 6:00 PM' },
         social: { title: 'Follow Us', items: ['Facebook', 'Instagram', 'YouTube', 'TikTok'] },
       },
     },
@@ -556,7 +556,7 @@ const translations = {
       categories: { all: 'All', tips: 'Tips & Advice', behind: 'Behind the Scenes', inspiration: 'Inspiration' },
     },
     floatingContact: {
-      callTooltip: '0901 234 567',
+      callTooltip: '080-6672-1993',
       callLabel: 'Call us',
       zaloTooltip: 'Chat on Zalo',
       zaloLabel: 'Chat on Zalo',
@@ -564,7 +564,7 @@ const translations = {
     footer: {
       tagline: 'Capturing timeless moments.',
       address: 'Oji OJ Building, 1-21-2 Oji, Kita Ward, Tokyo 114-0002, Japan',
-      phone: '0901 234 567',
+      phone: '080-6672-1993',
       email: 'hello@momijistudio.vn',
       pagesTitle: 'Pages',
       servicesTitle: 'Services',
@@ -595,7 +595,7 @@ const translations = {
       intro: {
         label: 'MOMIJI STUDIOについて',
         title: '感情から生まれた\nアート',
-        text: 'MOMIJI STUDIOは、すべての写真が真の感情から生み出された芸術作品である場所です。10年以上の経験を持ち、ベトナム全土でカップル、家族、個人の何千もの忘れられない瞬間を記録してきました。',
+        text: 'MOMIJI STUDIOは、すべての写真が真の感情から生み出された芸術作品である場所です。',
         stat1: { number: '2,500+', label: '完成した作品' },
         stat2: { number: '10+', label: '年の経験' },
         stat3: { number: '98%', label: '顧客満足度' },
@@ -653,7 +653,7 @@ const translations = {
         title: '思い出を\n残しませんか？',
         text: '今日ご連絡いただければ、無料カウンセリングと撮影スケジュールのご調整を行います。',
         button: '今すぐ予約',
-        phone: 'お電話: 0901 234 567',
+        phone: 'お電話: 080-6672-1993',
       },
     },
     portfolio: {
@@ -740,9 +740,9 @@ const translations = {
       info: {
         title: 'お問い合わせ先',
         address: '〒114-0002\n東京都北区王子1丁目21-2 王子OJビル',
-        phone: '0901 234 567',
+        phone: '080-6672-1993',
         email: 'hello@momijistudio.vn',
-        hours: '月〜土: 9:00〜19:00',
+        hours: '月〜土: 9:00〜18:00',
       },
     },
     about: {
@@ -819,9 +819,9 @@ const translations = {
       info: {
         title: 'お問い合わせ先',
         address: { label: '住所', value: '〒114-0002 東京都北区王子1丁目21-2 王子OJビル' },
-        phone: { label: '電話', value: '0901 234 567' },
+        phone: { label: '電話', value: '080-6672-1993' },
         email: { label: 'メール', value: 'hello@momijistudio.vn' },
-        hours: { label: '営業時間', value: '月〜土: 9:00〜19:00' },
+        hours: { label: '営業時間', value: '月〜土: 9:00〜18:00' },
         social: { title: 'フォローする', items: ['Facebook', 'Instagram', 'YouTube', 'TikTok'] },
       },
     },
@@ -839,7 +839,7 @@ const translations = {
       categories: { all: 'すべて', tips: 'ヒント', behind: 'メイキング', inspiration: 'インスピレーション' },
     },
     floatingContact: {
-      callTooltip: '0901 234 567',
+      callTooltip: '080-6672-1993',
       callLabel: 'お電話',
       zaloTooltip: 'Zaloでチャット',
       zaloLabel: 'Zaloでチャット',
@@ -847,7 +847,7 @@ const translations = {
     footer: {
       tagline: '永遠の瞬間を残す。',
       address: '〒114-0002 東京都北区王子1丁目21-2 王子OJビル',
-      phone: '0901 234 567',
+      phone: '080-6672-1993',
       email: 'hello@momijistudio.vn',
       pagesTitle: 'ページ',
       servicesTitle: 'サービス',

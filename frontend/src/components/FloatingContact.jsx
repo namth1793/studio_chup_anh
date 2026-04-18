@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useLang } from '../context/LanguageContext'
 
-const PHONE = '0901234567'
-const ZALO = '0901234567'
+const PHONE = '08066721993'
+const ZALO = '08066721993'
 
 function useShake(interval = 5000, offset = 0) {
   const [shaking, setShaking] = useState(false)

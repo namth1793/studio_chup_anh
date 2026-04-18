@@ -24,8 +24,13 @@ export default function Navbar() {
     { to: '/', label: t('nav.home') },
     { to: '/services', label: t('nav.services') },
     { to: '/about', label: t('nav.about') },
-    { to: '/blog', label: t('nav.blog') },
     { to: '/contact', label: t('nav.contact') },
+  ]
+
+  const LANGS = [
+    { code: 'vi', flag: '🇻🇳', name: 'Việt Nam' },
+    { code: 'en', flag: '🇺🇸', name: 'English' },
+    { code: 'jp', flag: '🇯🇵', name: '日本語' },
   ]
 
   const isActive = (to) => location.pathname === to
@@ -38,10 +43,10 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}>
-      <div className="max-w-7xl mx-auto px-1 lg:px-1">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="font-display font-bold text-2xl tracking-wider transition-colors duration-500" style={{ color: '#BBA18E' }}>
+          <Link to="/" className="font-display font-bold text-xl lg:text-2xl tracking-wider transition-colors duration-500 shrink-0" style={{ color: '#BBA18E' }}>
             MOMIJI STUDIO
           </Link>
 
@@ -64,18 +69,19 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right side */}
+          {/* Right side — desktop */}
           <div className="hidden lg:flex items-center gap-6">
             {/* Language switcher */}
-            <div className={`flex items-center gap-2 font-body text-xs font-medium tracking-widest ${textColor}`}>
-              {['vi', 'en', 'jp'].map((l, i) => (
-                <span key={l} className="flex items-center gap-2">
-                  {i > 0 && <span className="opacity-30">|</span>}
+            <div className={`flex items-center gap-1 font-body text-xs font-medium ${textColor}`}>
+              {LANGS.map((l, i) => (
+                <span key={l.code} className="flex items-center gap-1">
+                  {i > 0 && <span className="opacity-20 mx-1">|</span>}
                   <button
-                    onClick={() => setLang(l)}
-                    className={`uppercase transition-opacity duration-200 hover:opacity-100 ${lang === l ? 'opacity-100' : 'opacity-40'}`}
+                    onClick={() => setLang(l.code)}
+                    className={`flex items-center gap-1.5 px-2 py-1 rounded transition-all duration-200 hover:opacity-100 ${lang === l.code ? 'opacity-100' : 'opacity-40'}`}
                   >
-                    {l}
+                    <span className="text-base leading-none">{l.flag}</span>
+                    <span className="tracking-wide">{l.name}</span>
                   </button>
                 </span>
               ))}
@@ -92,46 +98,58 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className={`lg:hidden flex flex-col gap-1.5 w-6 ${textColor}`}
-            aria-label="Toggle menu"
-          >
-            <span className={`block h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-px bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-          </button>
+          {/* Mobile: Hamburger */}
+          <div className="flex lg:hidden items-center">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className={`flex flex-col justify-center gap-[5px] w-10 h-10 ${textColor}`}
+              aria-label="Toggle menu"
+            >
+              <span className={`block h-px w-6 mx-auto bg-current transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+              <span className={`block h-px w-6 mx-auto bg-current transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+              <span className={`block h-px w-6 mx-auto bg-current transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile menu */}
-      <div className={`lg:hidden overflow-hidden transition-all duration-500 bg-cream ${menuOpen ? 'max-h-screen pb-8' : 'max-h-0'}`}>
-        <div className="px-6 pt-4 flex flex-col gap-6">
+      <div className={`lg:hidden overflow-hidden transition-all duration-500 bg-cream ${menuOpen ? 'max-h-screen pb-6' : 'max-h-0'}`}>
+        <div className="px-5 pt-2 pb-2 flex flex-col border-t border-bone">
+          {/* Nav links */}
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`font-body font-medium text-sm tracking-widest uppercase text-ink transition-opacity duration-200
-                ${isActive(link.to) ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+              className={`font-body font-medium text-sm tracking-widest uppercase text-ink py-4 border-b border-bone/50 transition-opacity duration-200
+                ${isActive(link.to) ? 'opacity-100' : 'opacity-50 active:opacity-100'}`}
             >
               {link.label}
             </Link>
           ))}
-          <div className="flex items-center gap-3 font-body text-xs font-medium tracking-widest text-ink pt-2 border-t border-bone">
-            {['vi', 'en', 'jp'].map((l) => (
+
+          {/* Book Now */}
+          <Link to="/booking" className="btn-primary text-center mt-5 mb-1">
+            {t('nav.bookNow')}
+          </Link>
+
+          {/* Language switcher */}
+          <div className="flex items-center gap-1 pt-4 pb-2 flex-wrap">
+            {LANGS.map((l) => (
               <button
-                key={l}
-                onClick={() => setLang(l)}
-                className={`uppercase transition-opacity duration-200 ${lang === l ? 'opacity-100' : 'opacity-40'}`}
+                key={l.code}
+                onClick={() => setLang(l.code)}
+                className={`flex items-center gap-2 px-3 py-2 border transition-all duration-200
+                  ${lang === l.code
+                    ? 'border-gold text-ink opacity-100'
+                    : 'border-bone text-mist opacity-70 hover:opacity-100'
+                  }`}
               >
-                {l}
+                <span className="text-lg leading-none">{l.flag}</span>
+                <span className="font-body text-xs tracking-wide">{l.name}</span>
               </button>
             ))}
           </div>
-          <Link to="/booking" className="btn-primary self-start">
-            {t('nav.bookNow')}
-          </Link>
         </div>
       </div>
     </header>
