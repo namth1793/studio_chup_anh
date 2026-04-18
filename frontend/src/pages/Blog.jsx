@@ -27,14 +27,16 @@ function AosDiv({ className = '', children, delay = 0 }) {
   )
 }
 
-function formatDate(dateStr) {
+const LOCALE_MAP = { vi: 'vi-VN', en: 'en-US', jp: 'ja-JP' }
+
+function formatDate(dateStr, lang) {
   if (!dateStr) return ''
   const d = new Date(dateStr)
-  return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })
+  return d.toLocaleDateString(LOCALE_MAP[lang] || 'en-US', { day: '2-digit', month: '2-digit', year: 'numeric' })
 }
 
 export default function Blog() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const tr = (k) => t(`blog.${k}`)
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -88,11 +90,11 @@ export default function Blog() {
       <section className="py-16 max-w-7xl mx-auto px-6 lg:px-12">
         {loading ? (
           <div className="py-32 text-center">
-            <p className="font-body font-light text-sm text-mist tracking-widest">Loading...</p>
+            <p className="font-body font-light text-sm text-mist tracking-widest">{tr('loading')}</p>
           </div>
         ) : filtered.length === 0 ? (
           <div className="py-32 text-center">
-            <p className="font-body font-light text-sm text-mist">No posts found.</p>
+            <p className="font-body font-light text-sm text-mist">{tr('noPostsFound')}</p>
           </div>
         ) : (
           <>
@@ -119,7 +121,7 @@ export default function Blog() {
                       <span className="font-body font-medium text-xs tracking-widest uppercase text-gold border-b border-gold pb-px">
                         {tr('readMore')} →
                       </span>
-                      <span className="font-body font-light text-xs text-mist">{formatDate(featured.published_at)}</span>
+                      <span className="font-body font-light text-xs text-mist">{formatDate(featured.published_at, lang)}</span>
                     </div>
                   </div>
                 </Link>
@@ -149,7 +151,7 @@ export default function Blog() {
                           <span className="font-body font-medium text-xs tracking-widest uppercase text-gold border-b border-gold pb-px">
                             {tr('readMore')} →
                           </span>
-                          <span className="font-body font-light text-xs text-mist">{formatDate(post.published_at)}</span>
+                          <span className="font-body font-light text-xs text-mist">{formatDate(post.published_at, lang)}</span>
                         </div>
                       </div>
                     </Link>

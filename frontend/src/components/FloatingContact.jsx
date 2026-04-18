@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLang } from '../context/LanguageContext'
 
 const PHONE = '0901234567'
 const ZALO = '0901234567'
@@ -55,6 +56,8 @@ function ContactBtn({ href, target, rel, color, pingColor, tooltip, label, shaki
 }
 
 export default function FloatingContact() {
+  const { t } = useLang()
+  const fc = (k) => t(`floatingContact.${k}`)
   const phoneShaking = useShake(6000, 500)
   const zaloShaking  = useShake(6000, 3200)
 
@@ -64,8 +67,8 @@ export default function FloatingContact() {
         href={`tel:${PHONE}`}
         color="bg-green-500 hover:bg-green-600"
         pingColor="bg-green-400"
-        tooltip={PHONE}
-        label="Gọi điện"
+        tooltip={fc('callTooltip')}
+        label={fc('callLabel')}
         shaking={phoneShaking}
       >
         <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
@@ -79,8 +82,8 @@ export default function FloatingContact() {
         rel="noopener noreferrer"
         color="bg-blue-500 hover:bg-blue-600"
         pingColor="bg-blue-400"
-        tooltip="Nhắn Zalo"
-        label="Chat Zalo"
+        tooltip={fc('zaloTooltip')}
+        label={fc('zaloLabel')}
         shaking={zaloShaking}
       >
         <svg viewBox="0 0 48 48" className="w-7 h-7" fill="none">

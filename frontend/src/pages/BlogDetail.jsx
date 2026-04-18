@@ -3,15 +3,17 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useLang } from '../context/LanguageContext'
 
-function formatDate(dateStr) {
+const LOCALE_MAP = { vi: 'vi-VN', en: 'en-US', jp: 'ja-JP' }
+
+function formatDate(dateStr, lang) {
   if (!dateStr) return ''
   const d = new Date(dateStr)
-  return d.toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })
+  return d.toLocaleDateString(LOCALE_MAP[lang] || 'en-US', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })
 }
 
 export default function BlogDetail() {
   const { slug } = useParams()
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const [post, setPost] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
@@ -27,7 +29,7 @@ export default function BlogDetail() {
   if (loading) {
     return (
       <div className="pt-20 min-h-screen flex items-center justify-center">
-        <p className="font-body font-light text-sm text-mist tracking-widest">Loading...</p>
+        <p className="font-body font-light text-sm text-mist tracking-widest">{t('blog.loading')}</p>
       </div>
     )
   }
@@ -36,7 +38,7 @@ export default function BlogDetail() {
     return (
       <div className="pt-20 min-h-screen flex items-center justify-center flex-col gap-6">
         <p className="font-display font-light text-3xl text-ink">404</p>
-        <p className="font-body font-light text-sm text-mist">Không tìm thấy bài viết.</p>
+        <p className="font-body font-light text-sm text-mist">{t('blog.notFound')}</p>
         <Link to="/blog" className="btn-outline">{t('blog.backToBlog')}</Link>
       </div>
     )
@@ -62,7 +64,7 @@ export default function BlogDetail() {
           <div className="flex items-center gap-6">
             <span className="font-body font-light text-xs text-cream/60">{post.author}</span>
             <span className="font-body font-light text-xs text-cream/40">—</span>
-            <span className="font-body font-light text-xs text-cream/60">{formatDate(post.published_at)}</span>
+            <span className="font-body font-light text-xs text-cream/60">{formatDate(post.published_at, lang)}</span>
           </div>
         </div>
       </section>

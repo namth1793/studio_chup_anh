@@ -6,7 +6,7 @@ export default function Footer() {
 
   const pages = [
     { to: '/', label: t('nav.home') },
-    { to: '/portfolio', label: t('nav.portfolio') },
+    { to: '/services', label: t('nav.services') },
     { to: '/about', label: t('nav.about') },
     { to: '/blog', label: t('nav.blog') },
     { to: '/contact', label: t('nav.contact') },

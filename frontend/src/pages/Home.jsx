@@ -116,7 +116,7 @@ function HeroCarousel({ tr }) {
           {tr('hero.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link to="/portfolio" className="btn-outline-cream">
+          <Link to="/services" className="btn-outline-cream">
             {tr('hero.cta')}
           </Link>
           <Link to="/booking" className="font-body font-medium text-xs tracking-widest uppercase text-cream/70 hover:text-cream transition-colors duration-300 py-4">
@@ -349,7 +349,7 @@ export default function Home() {
             ))}
           </div>
           <AosDiv className="text-center mt-12">
-            <Link to="/portfolio" className="btn-outline">{tr('featured.viewAll')}</Link>
+            <Link to="/services" className="btn-outline">{tr('featured.viewAll')}</Link>
           </AosDiv>
         </div>
       </section>

@@ -4,7 +4,7 @@ import translations from '../i18n/translations'
 const LanguageContext = createContext()
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('vi')
+  const [lang, setLang] = useState('en')
 
   const t = (path) => {
     const keys = path.split('.')

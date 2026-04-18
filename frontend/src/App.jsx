@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FloatingContact from './components/FloatingContact'
 import Home from './pages/Home'
-import Portfolio from './pages/Portfolio'
 import Services from './pages/Services'
 import Booking from './pages/Booking'
 import About from './pages/About'
@@ -28,7 +27,6 @@ function AppInner() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/about" element={<About />} />
